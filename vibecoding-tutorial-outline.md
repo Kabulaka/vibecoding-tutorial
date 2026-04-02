@@ -16,8 +16,8 @@ vibecoding-tutorial/
 │   ├── what-is-vibecoding.md          # 什么是 VibeCoding（精简版，快速建立认知）
 │   ├── first-vibe.md                  # 你的第一次"甩手掌柜"体验（先爽一把）
 │   │                                   # (0代码实现一个小功能)
-│   └── toolkit-setup.md               # 补环境：核心工具链与神仙套件
-│                                       # (Claude Code, API中转, Superpowers, context7)
+│   └── toolkit-setup.md               # 补环境：Claude Code 与开发便捷功能
+│                                       # (Claude Code 安装、API中转、模型切换、StatusLine)
 │
 ├── core-concepts/                     # 第二章：核心范式（40分钟）
 │   ├── commander-vs-coder.md          # 角色转变：从"开发者"到"总指挥"
@@ -60,7 +60,7 @@ vibecoding-tutorial/
 |------|----------|
 | what-is-vibecoding.md | 精简版概念介绍：从 Copilot → ChatGPT → Agent 的演进，快速建立认知 |
 | first-vibe.md | **先体验，再学习**。手把手完成一个小功能（如生成一个待办列表），全程 0 手写代码，感受"甩手掌柜"的快感 |
-| toolkit-setup.md | 补环境课：安装配置 Claude Code、API 中转方案、Superpowers 技能、context7 文档查询 |
+| toolkit-setup.md | 补环境课：安装 Claude Code，并认识 API 中转、模型切换、Claude Code StatusLine 等开发便捷功能 |
 
 ### 第二章：核心范式（40分钟）
 目标：理解 VibeCoding 的本质和工作原理
