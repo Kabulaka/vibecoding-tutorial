@@ -18,7 +18,7 @@
 
 ## 第三章：实战操纵
 
-- [如何给 AI 下达"可执行任务"](practical-skills/how-to-spec-tasks.md)
+- [如何给 AI 下达“可执行任务”](practical-skills/how-to-spec-tasks.md)
 - [拆解大需求：从 PRD 到逐步实现](practical-skills/big-feature-breakdown.md)
 - [死循环处理：当 AI 陷入反复尝试怎么办](practical-skills/loop-and-debug.md)
 - [审查 AI 的代码](practical-skills/code-review-for-ai.md)
