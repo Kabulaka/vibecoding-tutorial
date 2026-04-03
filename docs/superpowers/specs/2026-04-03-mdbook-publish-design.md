@@ -56,6 +56,8 @@
 ### 导航
 
 - 左侧导航直接使用 mdBook 对 `SUMMARY.md` 的原生解析与渲染
+- 通过 `SUMMARY.md` 的嵌套层级生成章/节树，并显示编号结构，例如 `1`、`1.1`、`1.2`、`2`
+- 在 `book.toml` 中保持 HTML 输出的 `no-section-label = false`，确保侧边栏显示章节编号
 - 章节顺序以 `SUMMARY.md` 为准
 - 页面保留 mdBook 默认的上一页/下一页跳转能力
 
@@ -106,10 +108,11 @@ mdbook build
 
 1. 可以打开 `dist/vibecoding-tutorial-book/index.html`
 2. 左侧显示基于 `SUMMARY.md` 生成的章节树
-3. 点击侧边栏章节可跳转到对应页面
-4. 页面中的文档链接可正常点击
-5. 首页可以进入各章节内容
-6. `dist/vibecoding-tutorial-book/` 可以作为单个静态站点目录整体交付
+3. 左侧导航显示编号层级，例如 `1`、`1.1`、`1.2`、`2`
+4. 点击侧边栏章节可跳转到对应页面
+5. 页面中的文档链接可正常点击
+6. 首页可以进入各章节内容
+7. `dist/vibecoding-tutorial-book/` 可以作为单个静态站点目录整体交付
 
 ## 非目标
 
