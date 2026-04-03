@@ -105,8 +105,6 @@ fi
 mdbook serve
 ```
 
-用途：本地预览教程站点。
-
 ### clean
 执行：
 
@@ -135,18 +133,15 @@ rm -rf $(DIST_DIR) $(PACKAGE_FILE)
 说明：
 - 不把“精确匹配某条侧边栏文本”纳入 `check`，因为 mdBook 对引号字符的 HTML 输出会有格式差异，断言过于脆弱。
 - `check` 的目标是验证“构建成功 + 关键页面存在”，而不是做脆弱的文本快照测试。
+- 本次不把压缩包检查并入 `check`，避免和 `build` / `package` 责任重叠。
 
 ### open
 行为：
 
-1. 先打印 `$(INDEX_HTML)` 绝对或相对路径
-2. 如果存在 `xdg-open`，则执行 `xdg-open $(INDEX_HTML)`
-3. 否则如果存在 `open`，则执行 `open $(INDEX_HTML)`
-4. 若都不存在，仅打印提示，不报错
-
-说明：
-- 这样兼容 Linux 和 macOS
-- 不强依赖浏览器打开命令存在
+1. 打印 `$(INDEX_HTML)`
+2. 若存在 `xdg-open` 则尝试打开
+3. 否则若存在 `open` 则尝试打开
+4. 否则只打印路径
 
 ## PHONY
 应声明：
@@ -156,7 +151,7 @@ rm -rf $(DIST_DIR) $(PACKAGE_FILE)
 ```
 
 ## 默认目标
-默认目标设为：
+默认目标继续设为：
 
 ```make
 build
