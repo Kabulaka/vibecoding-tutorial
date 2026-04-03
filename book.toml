@@ -1,0 +1,13 @@
+[book]
+title = "VibeCoding 快速入门教程"
+language = "zh-CN"
+src = "vibecoding-tutorial"
+
+[build]
+build-dir = "dist/vibecoding-tutorial-book"
+create-missing = false
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+no-section-label = false

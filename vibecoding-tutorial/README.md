@@ -38,11 +38,11 @@ VibeCoding 不是某个神秘框架，也不是一句万能咒语。
 
 | 章节 | 时长 | 你会学到什么 |
 |------|------|---------------|
-| [第一章：快速开始](./quick-start/what-is-vibecoding.md) | 25 分钟 | 先建立直觉认知，完成第一次 VibeCoding 体验，并补齐核心工具链 |
-| [第二章：核心范式](./core-concepts/commander-vs-coder.md) | 40 分钟 | 理解角色转变、上下文管理、可信度判断、测试与能力扩展 |
-| [第三章：实战操纵](./practical-skills/how-to-spec-tasks.md) | 30 分钟 | 学会任务设计、需求拆解、死循环处理、代码审查与重构协作 |
-| [第四章：完整案例](./case-study/build-a-real-project.md) | 30 分钟 | 用一个完整案例串起从需求到交付的全过程 |
-| [第五章：最佳实践](./best-practices/context-limits.md) | 30 分钟 | 建立长期可复用的高效协作原则，避免常见踩坑 |
+| [第一章：快速开始](./quick-start/README.md) | 25 分钟 | 先建立直觉认知，完成第一次 VibeCoding 体验，并补齐核心工具链 |
+| [第二章：核心范式](./core-concepts/README.md) | 40 分钟 | 理解角色转变、上下文管理、可信度判断、测试与能力扩展 |
+| [第三章：实战操纵](./practical-skills/README.md) | 30 分钟 | 学会任务设计、需求拆解、死循环处理、代码审查与重构协作 |
+| [第四章：完整案例](./case-study/README.md) | 30 分钟 | 用一个完整案例串起从需求到交付的全过程 |
+| [第五章：最佳实践](./best-practices/README.md) | 30 分钟 | 建立长期可复用的高效协作原则，避免常见踩坑 |
 
 **预计总学习时长：2-2.5 小时。**
 
@@ -62,6 +62,6 @@ VibeCoding 不是某个神秘框架，也不是一句万能咒语。
 
 ## 从这里开始
 
-准备好了就从 [第一章：快速开始](./quick-start/what-is-vibecoding.md) 开始。
+准备好了就从 [第一章：快速开始](./quick-start/README.md) 开始。
 
 先别急着追求“让 AI 一次生成整个系统”，先学会让它稳定地把一件小事做好。VibeCoding 的核心不是一把梭，而是高质量协作。
