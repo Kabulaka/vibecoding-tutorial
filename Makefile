@@ -1,12 +1,31 @@
 .DEFAULT_GOAL := build
 
+PROJECT_NAME := vibecoding-tutorial-book
 DIST_DIR := dist/vibecoding-tutorial-book
 INDEX_HTML := $(DIST_DIR)/index.html
+VERSION := $(shell git describe --tags --always --dirty 2>/dev/null || echo "v0.0.0-dev")
+BUILD_TIME := $(shell date -u '+%Y-%m-%d_%H:%M:%S')
+COMMIT_HASH := $(shell git rev-parse --short HEAD 2>/dev/null || echo "unknown")
+PACKAGE_FILE := dist/$(PROJECT_NAME)-$(VERSION).tar.gz
 
-.PHONY: build serve clean check open
+.PHONY: build package serve clean check open version
 
 build:
 	mdbook build
+	@$(MAKE) package
+
+package:
+	@if [ ! -d "$(DIST_DIR)" ]; then \
+		printf '%s\n' "Error: build output not found at $(DIST_DIR). Run 'make build' first."; \
+		exit 1; \
+	fi
+	@tar -czf "$(PACKAGE_FILE)" -C dist "$(PROJECT_NAME)"
+
+version:
+	@echo "项目: $(PROJECT_NAME)"
+	@echo "版本: $(VERSION)"
+	@echo "构建时间: $(BUILD_TIME)"
+	@echo "提交哈希: $(COMMIT_HASH)"
 
 check:
 	mdbook build
@@ -16,7 +35,7 @@ serve:
 	mdbook serve
 
 clean:
-	rm -rf $(DIST_DIR)
+	rm -rf $(DIST_DIR) $(PACKAGE_FILE)
 
 open:
 	@printf '%s\n' "$(INDEX_HTML)"
