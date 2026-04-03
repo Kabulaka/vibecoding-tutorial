@@ -32,6 +32,7 @@ version:
 check:
 	mdbook build
 	@DIST_DIR="$(DIST_DIR)" python3 -c 'from pathlib import Path; import os, sys; root = Path(os.environ["DIST_DIR"]); required = [root / "index.html", root / "quick-start/index.html", root / "core-concepts/index.html", root / "practical-skills/index.html", root / "case-study/index.html", root / "best-practices/index.html"]; missing = [str(path) for path in required if not path.exists()]; sys.exit("Missing files: " + ", ".join(missing)) if missing else print("OK: all required html files exist")'
+	@DIST_DIR="$(DIST_DIR)" python3 -c 'from pathlib import Path; import os, sys; root = Path(os.environ["DIST_DIR"]); targets = [root / "index.html", root / "print.html"]; broken = [str(path) for path in targets if path.exists() and "README.html" in path.read_text()]; sys.exit("Broken README.html links found in: " + ", ".join(broken)) if broken else print("OK: no generated README.html links in key pages")'
 
 serve:
 	mdbook serve
