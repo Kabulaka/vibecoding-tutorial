@@ -62,4 +62,8 @@ vibecoding-tutorial/
 - 保持内容的实用性，避免纯理论说教
 - 诚实面对 AI 的局限性，不夸大能力
 - 示例代码需经过实际验证
-- 版本号管理：跟随 Claude Code 版本更新关键内容
+- 教程内容中的版本说明：跟随 Claude Code 版本更新关键内容
+- Makefile 构建版本：统一来自 `git describe --tags --always --dirty`
+- `make build`：除构建 mdBook 外，还会自动生成带版本号的压缩包
+- 不在 `make` 命令行中手工指定版本号
+- `make clean`：删除构建目录以及当前版本对应的压缩包
