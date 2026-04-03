@@ -2,6 +2,7 @@
 
 PROJECT_NAME := vibecoding-tutorial-book
 DIST_DIR := dist/vibecoding-tutorial-book
+PAGES_ARTIFACT_DIR := $(DIST_DIR)
 INDEX_HTML := $(DIST_DIR)/index.html
 VERSION := $(shell git describe --tags --always --dirty 2>/dev/null || echo "v0.0.0-dev")
 BUILD_TIME := $(shell date -u '+%Y-%m-%d_%H:%M:%S')
@@ -26,6 +27,7 @@ version:
 	@echo "版本: $(VERSION)"
 	@echo "构建时间: $(BUILD_TIME)"
 	@echo "提交哈希: $(COMMIT_HASH)"
+	@echo "Pages artifact: $(PAGES_ARTIFACT_DIR)"
 
 check:
 	mdbook build

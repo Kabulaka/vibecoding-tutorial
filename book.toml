@@ -11,3 +11,4 @@ create-missing = false
 default-theme = "light"
 preferred-dark-theme = "navy"
 no-section-label = false
+site-url = "/vibecoding/"
