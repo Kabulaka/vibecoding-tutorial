@@ -1,4 +1,5 @@
 .claude/
+dist/
 .worktrees/
 .DS_Store
 *.log
